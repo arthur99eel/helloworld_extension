@@ -1,0 +1,19 @@
+{
+  "manifest_version":2,
+  "name": "My Cool Extension",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.web.whatsapp.com/*"
+      ],
+      "js": ["inject.js"],
+      "all_frames":true
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "content.js"
+  ]
+}
+
